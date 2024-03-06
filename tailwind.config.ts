@@ -9,7 +9,31 @@ const config: Config = {
     "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        brand: {
+          primary: "#4D37C9",
+          accent: "#583AFE",
+          secondary: "#7C71F4",
+        },
+        surface: {
+          primary: "#fff",
+          secondary: "#EFEEF6",
+        },
+        text: {
+          primary: "#080808",
+          secondary: "#505055",
+          tertiary: "#BCBBC3",
+        },
+        icon: {
+          primary: "#333336",
+        },
+        decorative: {
+          blue: "#583AFE",
+          red: "#EA0038",
+        },
+      },
+    },
   },
   darkMode: "class",
   plugins: [nextui()],
