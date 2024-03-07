@@ -1,7 +1,5 @@
+import FeaturesSection from "./sections/Features";
+
 export default function Home() {
-  return (
-    <>
-      <div>Effinity</div>
-    </>
-  );
+  return <FeaturesSection />;
 }

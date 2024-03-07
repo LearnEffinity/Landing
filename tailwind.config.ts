@@ -13,8 +13,11 @@ const config: Config = {
       colors: {
         brand: {
           primary: "#4D37C9",
+          "primary-dark": "#412CBB",
           accent: "#583AFE",
+          "accent-dark": "#7066E0",
           secondary: "#7C71F4",
+          "secondary-dark": "#4D31E7",
         },
         surface: {
           primary: "#fff",
@@ -41,9 +44,6 @@ const config: Config = {
       },
       lineHeight: {
         "12": "3rem",
-      },
-      fontSize: {
-        massive: "240px",
       },
       keyframes: {
         "gradient-x": {
