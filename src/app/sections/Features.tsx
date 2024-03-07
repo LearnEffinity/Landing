@@ -1,16 +1,22 @@
 function FeatureCard({
   active = false,
   index,
+  heading,
+  paragraph,
   className,
+  textClassName,
   children,
 }: {
   active?: boolean;
+  heading: string | React.ReactNode;
+  paragraph: string;
   index: number;
   className: string;
+  textClassName: string;
   children: React.ReactNode;
 }) {
   const alignment =
-    index % 2 === 0 ? "desktop:justify-end" : "desktop:justify-start";
+    index % 2 === 0 ? "desktop:justify-start" : "desktop:justify-end";
 
   return (
     <div
@@ -30,9 +36,18 @@ function FeatureCard({
         }
       >
         <div
-          className={`w-full h-full border-white border-5 desktop:rounded-4xl rounded-2xl ${className}`}
+          className={`w-full h-full border-white border-5 desktop:rounded-4xl rounded-2xl flex desktop:p-16 z-10 ${className}`}
         >
           {children}
+          <div className="flex flex-col gap-4 w-full text-white max-w-[500px] relative">
+            <span
+              className={`absolute -z-10 font-semibold desktop:text-[240px]/[240px] text-[152px]/[152px ${textClassName}`}
+            >
+              {index.toString().padStart(2, "0")}
+            </span>
+            <h2 className="font-semibold text-3xl/12">{heading}</h2>
+            <p className="font-medium text-lg/8">{paragraph}</p>
+          </div>
         </div>
       </div>
     </div>
@@ -44,8 +59,17 @@ export default function FeaturesSection() {
     <section className="flex flex-col">
       <FeatureCard
         active
-        index={0}
-        className="bg-brand-primary flex desktop:p-16 justify-end z-10"
+        index={1}
+        heading={
+          <>
+            Gamifying Your Finances:
+            <br />
+            Learn While You Play!
+          </>
+        }
+        paragraph="Who said learning about money has to be dull? With our gamified approach, you'll be mastering finance while having a blast!"
+        className="bg-brand-primary justify-end"
+        textClassName="bottom-0 left-0 -translate-x-1/2 -translate-y-8 text-brand-primary-dark"
       >
         <img
           src="/features/Feature-Image-1.png"
@@ -57,21 +81,6 @@ export default function FeaturesSection() {
           alt=""
           className="absolute right-0 bottom-0"
         />
-        <div className="flex flex-col gap-4 w-full text-white max-w-[500px] relative">
-          {/* This setup kinda sucks ngl, the figma spacing is so inconsistent */}
-          <span className="absolute -z-10 font-semibold bottom-0 left-0 -translate-x-1/2 -translate-y-8 text-brand-primary-dark desktop:text-[240px]/[240px] text-[152px]/[152px">
-            01
-          </span>
-          <h2 className="font-semibold text-3xl/12">
-            Gamifying Your Finances:
-            <br />
-            Learn While You Play!
-          </h2>
-          <p className="font-medium text-lg/8">
-            Who said learning about money has to be dull? With our gamified
-            approach, you'll be mastering finance while having a blast!
-          </p>
-        </div>
       </FeatureCard>
     </section>
   );
