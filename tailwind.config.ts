@@ -33,6 +33,31 @@ const config: Config = {
           red: "#EA0038",
         },
       },
+      screens: {
+        desktop: "1248px",
+      },
+      borderRadius: {
+        "4xl": "40px",
+      },
+      lineHeight: {
+        "12": "3rem",
+      },
+      fontSize: {
+        massive: "240px",
+      },
+      keyframes: {
+        "gradient-x": {
+          "0%": {
+            backgroundPosition: "0% 50%",
+          },
+          "100%": {
+            backgroundPosition: "200% 50%",
+          },
+        },
+      },
+      animation: {
+        "gradient-x": "gradient-x 2.5s linear infinite",
+      },
     },
   },
   darkMode: "class",
