@@ -5,6 +5,7 @@ import { Poppins } from "next/font/google";
 
 const poppins = Poppins({
   weight: ["400", "500", "600"],
+  subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
@@ -19,9 +20,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <ThemeProvider>
-        <body className={poppins.className}>{children}</body>
-      </ThemeProvider>
+      <body className={`${poppins.className} bg-surface-primary min-h-screen`}>
+        <ThemeProvider>
+          {/* Navigation */}
+          <main className="w-full mx-auto max-w-screen-desktop px-4 desktop:px-0">
+            {children}
+          </main>
+          {/* Footer */}
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
