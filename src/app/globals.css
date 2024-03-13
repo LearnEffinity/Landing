@@ -1,3 +1,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  height: 500vh; /* Just to make the page scrollable */
+}
+
+@layer components {
+  .card {
+    @apply bg-surface-secondary;
+  }
+
+  .card.active {
+    @apply animate-gradient-x;
+    background-image: linear-gradient(
+      90deg,
+      rgba(88, 58, 254, 0.56) 0%,
+      rgba(234, 0, 56, 0.56) 50%,
+      rgba(88, 58, 254, 0.56) 100%
+    );
+    background-size: 200% 100%;
+  }
+}

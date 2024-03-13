@@ -15,9 +15,9 @@ const config: Config = {
           primary: "#4D37C9",
           "primary-dark": "#412CBB",
           accent: "#583AFE",
-          "accent-dark": "#7066E0",
+          "accent-dark": "#4D31E7",
           secondary: "#7C71F4",
-          "secondary-dark": "#4D31E7",
+          "secondary-dark": "#7066E0",
         },
         surface: {
           primary: "#fff",
