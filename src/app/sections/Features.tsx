@@ -52,7 +52,7 @@ function FeatureCard({
         className="card w-full h-full max-w-[1038px] desktop:h-[556px] max-h-[556px] grid place-items-center p-1 rounded-2xl desktop:rounded-[42px]"
       >
         <div
-          className={`w-full h-full border-white border-5 desktop:rounded-4xl rounded-2xl flex desktop:p-16 z-10 ${className}`}
+          className={`w-full h-full border-white border-5 ring-4 ring-offset-4 transition-shadow ring-surface-secondary desktop:rounded-4xl rounded-2xl flex desktop:p-16 z-10 ${className}`}
         >
           {children}
           <div className="flex flex-col gap-4 w-full text-white max-w-[500px] relative">
