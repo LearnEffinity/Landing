@@ -9,7 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@gsap/react": "^2.1.0",
     "@nextui-org/react": "^2.2.10",
+    "framer-motion": "^11.0.14",
     "gsap": "^3.12.5",
     "next": "14.1.1",
     "react": "^18",
