@@ -1,0 +1,106 @@
+.hero-section{
+    background-color: #fefbff;
+    /* delete color later */
+    color: black; 
+    height: 828px;
+    width: 1248px;
+    top: 152px;
+    left: 96px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.content-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 1248px;
+    height: 333px;
+    top: 399px;
+    left: 96px;
+    gap: 36px;
+}
+.title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 52px;
+    font-weight: 600;
+    line-height: 76px;
+    letter-spacing: 0em;
+    text-align: center;
+    width: 992px;
+  }
+  
+  .title-part1 {
+    /* Additional styles if needed for the first part */
+    color: #080808
+  }
+  
+  .title-part2 {
+    background: linear-gradient(90deg, #583AFE 0%, #EA0038 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent; /* This will make the text take the color of the background */
+    display: inline; /* Ensure the background spans only the text */
+  }
+  
+  .subtitle {
+    color: #505055;
+    max-width: 576px; 
+    height: 64px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 32px;
+    letter-spacing: 0em;
+    text-align: center;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  
+  .sign-up-cta {
+    position: relative;
+    width: 576px;
+    min-height: 64px; 
+    background: #EFEEF6; /* This is the background color of the input field */
+    border-radius: 12px; /* Match the border radius of the input field */
+    box-sizing: border-box;
+    border: none !important;
+  }
+  
+  .email-input {
+    width: 100%;
+    height: 100%;
+    padding-right: 120px; /* Make room for the button */
+    border: none !important;
+    outline: none !important;
+    border-radius: 12px;
+    padding-left: 16px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    color: #BCBBC3;
+    background-color: transparent; /* Make the input field transparent */
+    box-sizing: border-box; /* Include padding in the width */
+  }
+  
+  
+  .button-input {
+    position: absolute;
+    right: 16px; /* Distance from the right edge of the container */
+    top: 50%;
+    transform: translateY(-50%); /* Center the button vertically */
+    background: #583AFE;
+    border-radius: 8px;
+    border: none;
+    color: #FFFFFF;
+    font-family: 'Poppins', sans-serif;
+    /* dont capitalize the text */
+    text-transform: none;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 8px 20px;
+    cursor: pointer; /* Add a pointer cursor on hover */
+    box-shadow: none; /* Optional: remove shadow if there is any */
+  }
+  
