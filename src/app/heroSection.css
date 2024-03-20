@@ -3,13 +3,14 @@
     /* delete color later */
     color: black; 
     height: 828px;
-    width: 1248px;
+    width: 100%;
     top: 152px;
     left: 96px;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+    z-index: -2;
 }
 .content-container{
     display: flex;
@@ -47,8 +48,9 @@
   
   .subtitle {
     color: #505055;
-    max-width: 576px; 
-    height: 64px;
+    min-width: 500px;
+    max-width: 576px;
+    height: auto;
     font-family: 'Poppins', sans-serif;
     font-size: 18px;
     font-weight: 500;
@@ -58,7 +60,6 @@
     padding-left: 40px;
     padding-right: 40px;
   }
-  
   .sign-up-cta {
     position: relative;
     width: 576px;
@@ -100,7 +101,43 @@
     font-weight: 600;
     font-size: 16px;
     padding: 8px 20px;
-    cursor: pointer; /* Add a pointer cursor on hover */
-    box-shadow: none; /* Optional: remove shadow if there is any */
+    cursor: pointer; 
+    box-shadow: none;
   }
   
+  .backdrop{
+    position:absolute;
+    z-index: 1;
+    top: 20px; 
+  }
+  .board {
+    rotate: -18deg;
+    left: 293.53px;
+    top: 90px;
+  }
+  .study{
+    rotate: 10deg;
+    top: 60px;
+    left: 945px;
+  }
+
+  .trophy{
+    rotate: 20deg;
+    top: 685px;
+    left: 738px;
+  }
+
+  .card{
+    top: 600px;
+    left:156px;
+  }
+  .star{
+    top:340px;
+    left:110px;
+  }
+
+  .calculator{
+    rotate: 330deg;
+    top: 420px;
+    left: 900px;
+  }
