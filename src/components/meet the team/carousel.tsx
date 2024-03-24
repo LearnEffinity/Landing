@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Card from "./card";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 const TeamDetails = [
   {
@@ -126,6 +127,8 @@ const TeamDetails = [
 
 const Carousel = ({ selected }: { selected: any }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+
   const filteredTeam = TeamDetails.filter(
     (member) => member.category === selected
   );
@@ -141,40 +144,60 @@ const Carousel = ({ selected }: { selected: any }) => {
       prevIndex === filteredTeam.length - 1 ? 0 : prevIndex + 1
     );
   };
+  const checkScreenSize = () => {
+    setIsMobile(window.innerWidth <= 768); // Adjust the breakpoint as needed
+  };
 
-  const visibleCards = 3;
+  useEffect(() => {
+    checkScreenSize();
+    window.addEventListener("resize", checkScreenSize);
+    return () => {
+      window.removeEventListener("resize", checkScreenSize);
+    };
+  }, []);
+
+  const visibleCards = isMobile ? 1 : 3;
   const totalCards = filteredTeam.length;
   const getCardIndex = (index: number) =>
     (currentIndex + index - Math.floor(visibleCards / 2) + totalCards) %
     totalCards;
 
-  const showNavigationControls = totalCards > 3;
+  const showNavigationControls = totalCards > visibleCards;
 
   return (
     <>
       <div className="relative w-full overflow-hidden">
-        <AnimatePresence initial={false} custom={currentIndex}>
-          <motion.div
-            key={currentIndex}
-            custom={currentIndex}
-            initial={{ x: "100%" }}
-            animate={{ x: "0%" }}
-            exit={{ x: "-100%" }}
-            transition={{ duration: 0.5, ease: "easeInOut" }}
-            className="flex justify-center gap-8"
-          >
-            {Array.from({ length: visibleCards }).map((_, index) => (
-              <Card
-                key={filteredTeam[getCardIndex(index)].id}
-                member={filteredTeam[getCardIndex(index)]}
-              />
-            ))}
-          </motion.div>
-        </AnimatePresence>
+        {/* <AnimatePresence initial={false} custom={currentIndex}> */}
+        <motion.div
+          key={currentIndex}
+          custom={currentIndex}
+          // initial={{ x: "100%" }}
+          initial={false}
+          animate={{ x: "0%" }}
+          exit={{ x: "-100%" }}
+          transition={{ duration: 0.5, ease: "easeInOut" }}
+          className="flex justify-center gap-8"
+        >
+          {Array.from({ length: visibleCards }).map((_, index) => (
+            <Card
+              key={filteredTeam[getCardIndex(index)].id}
+              member={filteredTeam[getCardIndex(index)]}
+              isCurrentIndex={getCardIndex(index) === currentIndex}
+            />
+          ))}
+        </motion.div>
+        {/* </AnimatePresence> */}
       </div>
       {showNavigationControls && (
         <>
-          <div className="flex justify-center space-x-2 mt-4">
+          <div className="flex justify-center items-center space-x-2 mt-10">
+            <button
+              onClick={handlePrevClick}
+              className="w-14 h-14 text-2xl text-text-primary hover:bg-[#BCBBC3] transition-all duration-300 ease-in-out bg-surface-secondary rounded-full flex justify-center items-center"
+            >
+              <IoIosArrowBack />
+            </button>
+
             {filteredTeam.map((_, index) => (
               <button
                 key={index}
@@ -184,19 +207,13 @@ const Carousel = ({ selected }: { selected: any }) => {
                 }`}
               ></button>
             ))}
+            <button
+              onClick={handleNextClick}
+              className="w-14 h-14 text-2xl text-text-primary hover:bg-[#BCBBC3] transition-all duration-300 ease-in-out bg-surface-secondary rounded-full flex justify-center items-center"
+            >
+              <IoIosArrowForward />
+            </button>
           </div>
-          <button
-            onClick={handlePrevClick}
-            className="absolute top-1/2 left-4 transform -translate-y-1/2"
-          >
-            &lt;
-          </button>
-          <button
-            onClick={handleNextClick}
-            className="absolute top-1/2 right-4 transform -translate-y-1/2"
-          >
-            &gt;
-          </button>
         </>
       )}
     </>
