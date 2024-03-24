@@ -153,13 +153,14 @@ const Carousel = ({ selected }: { selected: any }) => {
   return (
     <>
       <div className="relative w-full overflow-hidden">
-        <AnimatePresence>
+        <AnimatePresence initial={false} custom={currentIndex}>
           <motion.div
             key={currentIndex}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.5 }}
+            custom={currentIndex}
+            initial={{ x: "100%" }}
+            animate={{ x: "0%" }}
+            exit={{ x: "-100%" }}
+            transition={{ duration: 0.5, ease: "easeInOut" }}
             className="flex justify-center gap-8"
           >
             {Array.from({ length: visibleCards }).map((_, index) => (
