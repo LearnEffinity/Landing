@@ -11,12 +11,19 @@ interface Member {
 
 interface CardProps {
   member: Member;
+  isCurrentIndex: boolean;
 }
 
-const Card: React.FC<CardProps> = ({ member }) => {
+const Card: React.FC<CardProps> = ({ member, isCurrentIndex }) => {
   return (
-    <div className="h-[624px] w-[392px] rounded-3xl bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 p-[3px]">
-      <div className="flex flex-col h-full px-6 pt-14 pb-20 w-full items-center rounded-3xl justify-center bg-surface-primary drop-shadow-xl">
+    <div
+      className={`h-[624px] w-[392px] rounded-[26px] drop-shadow-lg ${
+        isCurrentIndex
+          ? "bg-gradient-to-r from-decorative-blue/50 to-decorative-red/50"
+          : ""
+      } p-[3px]`}
+    >
+      <div className="flex flex-col h-full px-6 pt-14 pb-20 w-full items-center rounded-3xl justify-center bg-surface-primary ">
         <img
           src={member.image}
           key={member.id}
