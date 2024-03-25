@@ -47,6 +47,10 @@ const config: Config = {
       lineHeight: {
         "12": "3rem",
       },
+      fontSize: {
+        massive: "240px",
+        title: "52px",
+      },
       keyframes: {
         "gradient-x": {
           "0%": {
@@ -89,7 +93,5 @@ const config: Config = {
       },
     },
   },
-  darkMode: "class",
-  plugins: [nextui()],
 };
 export default config;
