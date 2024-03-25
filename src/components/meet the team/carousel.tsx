@@ -46,8 +46,7 @@ const TeamDetails = [
     id: 5,
     name: "Michael Beck",
     role: "Frontend",
-    description:
-      "Lorem ipsum dolor sit amet consectetur. Tellus nibh porta nunc pretium massa quis.",
+    description: "My dream is to one day pass the Turing test.",
     image: "/memojis/michael.png",
     category: "Developers",
   },
