@@ -1,11 +1,13 @@
+import CallToAction from "@/components/CallToAction";
+import MeetTheTeam from "@/components/meet the team";
 import HeroSection from "./heroSection";
 
 export default function Home() {
   return (
     <>
-      <div style={{ width: '5vw', height: '5vh' }}></div>
+      <MeetTheTeam />
+      <CallToAction />
       <HeroSection />
     </>
   );
 }
-
