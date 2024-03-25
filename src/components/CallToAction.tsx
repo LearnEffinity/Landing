@@ -82,7 +82,11 @@ export default function CallToAction() {
   return (
     <>
       <div className="flex flex-col lg:flex-row mt-10" id="#callToAction">
-        <div className="mx-auto h-full w-full hidden lg:block " ref={bush}>
+        <div
+          className="mx-auto h-full w-full hidden lg:block"
+          id="cta"
+          ref={bush}
+        >
           <div className="inset-y-0 left-0 mt-28" id="atom">
             <Image
               src="/cta/atom.png"
