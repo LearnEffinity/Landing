@@ -34,6 +34,8 @@ const config: Config = {
         decorative: {
           blue: "#583AFE",
           red: "#EA0038",
+          purple: "#AC9DFE",
+          pink: "#F4809C",
         },
       },
       screens: {
@@ -54,9 +56,36 @@ const config: Config = {
             backgroundPosition: "200% 50%",
           },
         },
+        "gradient-fill": {
+          "0%": {
+            fill: "#F4809C",
+          },
+          "50%": {
+            fill: "#AC9DFE",
+          },
+          "100%": {
+            fill: "#F4809C",
+          },
+        },
+        "gradient-stroke": {
+          "0%": {
+            stroke: "#F4809C",
+          },
+          "50%": {
+            stroke: "#AC9DFE",
+          },
+          "100%": {
+            stroke: "#F4809C",
+          },
+        },
       },
       animation: {
         "gradient-x": "gradient-x 2.5s linear infinite",
+        "gradient-fill": "gradient-fill 2.5s linear infinite",
+        "gradient-stroke": "gradient-stroke 2.5s linear infinite",
+      },
+      scale: {
+        "-100": "-1",
       },
     },
   },

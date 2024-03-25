@@ -11,9 +11,9 @@ body {
     @apply animate-gradient-x;
     background-image: linear-gradient(
       90deg,
-      rgba(88, 58, 254, 0.56) 0%,
-      rgba(234, 0, 56, 0.56) 50%,
-      rgba(88, 58, 254, 0.56) 100%
+      theme("colors.decorative.purple") 0%,
+      theme("colors.decorative.pink") 50%,
+      theme("colors.decorative.purple") 100%
     );
     background-size: 200% 100%;
   }
