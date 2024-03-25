@@ -1,9 +1,7 @@
-import {
-  AiFillLinkedin,
-  AiFillGithub,
-  AiFillInstagram,
-  AiFillMail,
-} from "react-icons/ai";
+import { AiFillLinkedin } from "react-icons/ai";
+import { FaDiscord, FaInstagram } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+
 import { Link } from "@nextui-org/react";
 const Logo = (
   <svg
@@ -34,7 +32,7 @@ const Logo = (
 
 const Footer = () => {
   return (
-    <footer className="flex flex-wrap items-center justify-between px-4 sm:px-10 py-4 bg-[#EFEEF6] rounded-t-lg">
+    <footer className="flex flex-wrap items-center justify-between px-4 sm:px-10 py-4 bg-[#EFEEF6] rounded-t-4xl h-[186px] md:h-[224px]">
       <div className="flex flex-col items-center sm:items-start w-full sm:w-auto text-center sm:text-left mb-4 sm:mb-0">
         {Logo}
         <p className="text-text">
@@ -46,13 +44,13 @@ const Footer = () => {
           <AiFillLinkedin size={24} />
         </Link>
         <Link href="#" className="text-icon-primary mx-2">
-          <AiFillGithub size={24} />
+          <FaDiscord size={24} />
         </Link>
         <Link href="#" className="text-icon-primary mx-2">
-          <AiFillInstagram size={24} />
+          <FaInstagram size={24} />
         </Link>
         <Link href="#" className="text-icon-primary mx-2">
-          <AiFillMail size={24} />
+          <FaXTwitter size={24} />
         </Link>
       </div>
     </footer>
