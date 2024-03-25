@@ -44,6 +44,7 @@ const config: Config = {
       },
       fontSize: {
         massive: "240px",
+        title: "52px",
       },
       keyframes: {
         "gradient-x": {
@@ -60,7 +61,5 @@ const config: Config = {
       },
     },
   },
-  darkMode: "class",
-  plugins: [nextui()],
 };
 export default config;
