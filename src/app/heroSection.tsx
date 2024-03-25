@@ -6,6 +6,7 @@ import OutlinedInput from "@mui/material/OutlinedInput";
 import "./heroSection.css";
 
 import { motion } from "framer-motion";
+import SignUpCTA from "./singUpCTA";
 interface HeroSectionProps {
   // Define any props you need for the HeroSection component
 }
@@ -22,16 +23,7 @@ return (
                 Say goodbye to boring finance lessons and get ahead financially while
                 having a blast with Effinity!
             </p>
-            <div className="sign-up-cta">
-                <OutlinedInput
-                    className="email-input"
-                    placeholder="Email Address..."
-                    sx={{ "& fieldset": { border: "none" } }}
-                />
-                <Button className="button-input" variant="contained" color="primary">
-                    Join Beta!
-                </Button>
-            </div>
+            <SignUpCTA />
             <motion.img
                 src="/heroIcons/Board.png"
                 alt="Descriptive alt text"
