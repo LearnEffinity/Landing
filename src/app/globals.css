@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  height: 500vh; /* Just to make the page scrollable */
-}
-
 @layer components {
   .card {
     @apply animate-gradient-x;
