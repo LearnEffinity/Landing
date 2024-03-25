@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { AiFillLinkedin } from "react-icons/ai";
 import { FaDiscord, FaInstagram } from "react-icons/fa";
@@ -6,9 +7,30 @@ import { FaXTwitter } from "react-icons/fa6";
 import Link from "next/link";
 
 export default function Navbar() {
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      if (currentScrollY > lastScrollY) {
+        setIsVisible(false);
+      } else {
+        setIsVisible(true);
+      }
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
   return (
     <>
-      <nav className="h-[120px] w-full flex items-center justify-between bg-surface-primary px-24">
+      <nav
+        className={`h-[120px] z-[9999] drop-shadow-lg w-full flex items-center justify-between bg-surface-primary px-24 fixed top-0 transition-all duration-300 ${
+          isVisible ? "translate-y-0" : "-translate-y-full"
+        }`}
+      >
         <div className="flex items-center md:justify-start w-full justify-center">
           <Image
             src="/Effinity-Logo.png"
