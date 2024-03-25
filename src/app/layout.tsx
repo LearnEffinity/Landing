@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import ThemeProvider from "./providers";
+import Navbar from "./components/navbar";
 
 export const metadata: Metadata = {
   title: "Effinity",
@@ -15,7 +16,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <ThemeProvider>
-        <body className={""}>{children}</body>
+        <body className={""}>
+          
+          <Navbar />
+        </body>
       </ThemeProvider>
     </html>
   );

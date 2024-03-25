@@ -1,0 +1,88 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins-Regular.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy-Bold';
+    src: url('../fonts/Gilroy-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+.navbar {
+    width: 1440px;
+    height: 120px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 96px;
+  }
+
+  .inner-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .button {
+    font-family: 'Poppins';
+    text-transform: none;
+    background: #583AFE;
+    border-radius: 8px;
+    color: #FFFFFF;
+    display: inline-flex;
+    padding: 12px 28px;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    gap: 10px;
+  }
+  
+  .navbar-links {
+    display: inline-flex;
+    align-items: center;
+    gap: 32px;
+  }
+
+  .logo-container {
+    align-items: center;
+    display: inline-flex;
+    gap: 8px;
+  }
+
+  /* divider */
+  .logo-container::after {
+    content: '';
+    display: inline-block;
+    width: 2px;
+    height: 28px;
+    background-color: #080808;
+    margin-left: 32px;
+    margin-right: 32px;
+}
+  
+  .nav-item {
+    display: inline-block;
+    margin-right: 1rem;
+    width: 24px;
+    height: 24px;
+  }
+  
+  .nav-link {
+    color: #513c3c;
+    text-decoration: none;
+    width: 24px;
+    height: 24px;
+  }
+
+  .title {
+    color: var(--Surface-DarkGrey, #080808);
+    font-family: 'Gilroy-Bold';
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
