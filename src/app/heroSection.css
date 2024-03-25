@@ -1,21 +1,22 @@
 /* Base styles */
-body, html {
+body,
+html {
   margin: 0;
   padding: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 /* Base styles for the hero section */
 .hero-section {
-  background-color: #fefbff;
   color: black;
 
   display: flex;
   flex-direction: column;
   align-items: center; /* Centers content horizontally */
   text-align: center;
+  /* justify-content: center; */
   padding-bottom: 36px; /* Space at the bottom */
-  height: 40vh; /* Adjust the height as needed */
+  height: 100vh; /* Adjust the height as needed */
 }
 
 /* Container for your content with max-width for larger screens and margins for responsiveness */
@@ -31,34 +32,36 @@ body, html {
 }
 
 /* Responsive typography */
-.title, .subtitle {
+.title,
+.subtitle {
   padding: 0 40px; /* Padding for smaller screens */
 }
 
 .title {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 3vw; /* Adjust font size based on screen width */
   font-weight: 600;
   line-height: 1.2;
   color: #080808;
-  min-width:992px;
+  min-width: 992px;
   min-width: 652px;
   text-align: center;
 }
 
-.title-part1, .title-part2 {
+.title-part1,
+.title-part2 {
   display: block; /* Stack the title parts on separate lines */
 }
 
 .title-part2 {
-  background: linear-gradient(90deg, #583AFE 0%, #EA0038 100%);
+  background: linear-gradient(90deg, #583afe 0%, #ea0038 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .subtitle {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 1.5vw; /* Adjust font size based on screen width */
   font-weight: 500;
   color: #505055;
@@ -67,7 +70,6 @@ body, html {
 }
 
 /* Responsive input and button styling */
-
 
 /* Hide backdrop images on smaller screens and position them relatively on larger screens */
 .backdrop {
@@ -81,7 +83,7 @@ body, html {
   /* Use percentage (%) for left property to make it relative to the container's width */
   left: 10%; /* Adjust as needed */
   top: 5%; /* Adjust as needed */
-  max-width: 180px ;
+  max-width: 180px;
 }
 
 .study {
@@ -125,7 +127,8 @@ body, html {
 
 @media (max-width: 450px) {
   /* Hide elements not necessary for small screens */
-  .backdrop, .subtitle {
+  .backdrop,
+  .subtitle {
     display: none;
   }
 }

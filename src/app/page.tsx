@@ -5,9 +5,9 @@ import HeroSection from "./heroSection";
 export default function Home() {
   return (
     <>
+      <HeroSection />
       <MeetTheTeam />
       <CallToAction />
-      <HeroSection />
     </>
   );
 }
