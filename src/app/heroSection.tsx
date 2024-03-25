@@ -3,7 +3,7 @@ import React from "react";
 import "./heroSection.css";
 
 import { motion } from "framer-motion";
-import SignUpCTA from "./singUpCTA";
+import SignUpButton from "@/components/SignUpForm";
 interface HeroSectionProps {
   // Define any props you need for the HeroSection component
 }
@@ -31,7 +31,7 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
           having a blast with Effinity!
         </p>
 
-        <SignUpCTA />
+        <SignUpButton />
 
         <motion.img
           src="/heroIcons/Board.png"

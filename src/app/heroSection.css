@@ -7,9 +7,10 @@ html {
 }
 
 /* Base styles for the hero section */
+/* Base styles for the hero section */
 .hero-section {
   color: black;
-
+  max-height: 828px;
   display: flex;
   flex-direction: column;
   align-items: center; /* Centers content horizontally */
@@ -21,6 +22,7 @@ html {
 
 /* Container for your content with max-width for larger screens and margins for responsiveness */
 .content-container {
+  height: 100%;
   max-width: 1248px;
   width: 100%; /* This ensures that the container takes up 100% of the hero-section width */
   margin: 0 auto; /* This will center the container */
@@ -29,6 +31,7 @@ html {
   align-items: center;
   gap: 36px;
   padding: 0 20px; /* Padding on the sides for smaller screens */
+  position: relative;
 }
 
 /* Responsive typography */
