@@ -1,0 +1,172 @@
+/* Base styles for the hero section */
+.hero-section {
+  top: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  color: black;
+  position: relative;
+  width: 100%;
+  margin-bottom: 120px;
+}
+
+/* Centered content container */
+.content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 70%; /* Content takes up 70% of the hero section's width */
+  gap: 36px;
+  z-index: 2;
+}
+
+.title-s2 {
+  line-height: 1.3 !important;
+}
+
+.title-h1 {
+  line-height: 1.3 !important;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(90deg, #583afe 0%, #ea0038 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.title-span-non {
+  background: transparent;
+  -webkit-text-fill-color: initial;
+}
+
+.backdrop {
+  position: absolute;
+  z-index: 0;
+  display: block;
+
+  transition: transform 0.3s ease-in-out;
+}
+
+.backdrop:hover {
+  animation: wiggle 1s ease-in-out infinite;
+}
+
+.board {
+  transform: rotate(-18deg);
+
+  left: 23%;
+  top: 5%;
+  max-width: 180px;
+}
+
+.study {
+  transform: rotate(10deg);
+  top: 6%;
+  right: 10%;
+  max-width: 200px;
+}
+
+.trophy {
+  transform: rotate(20deg);
+  bottom: 3%;
+  left: 55%;
+  max-width: 184px;
+}
+
+.credit {
+  bottom: 6%;
+  left: 15%;
+  max-width: 180px;
+}
+
+.star {
+  top: 34%;
+  left: -3%;
+  max-width: 94px;
+}
+
+.calculator {
+  transform: rotate(-30deg);
+  top: 42%;
+  right: 0%;
+  max-width: 180px;
+}
+@media (max-width: 768px) {
+  .backdrop {
+    transform: scale(0.8);
+  }
+  .calculator {
+    transform: rotate(-30deg) scale(0.8);
+  }
+  .board {
+    transform: rotate(-18deg) scale(0.8);
+  }
+  .trophy {
+    transform: rotate(20deg) scale(0.8);
+  }
+}
+
+@media (max-width: 600px) {
+  .backdrop {
+    display: none;
+  }
+
+  .content-container {
+    width: 100%;
+  }
+  .subtitle {
+    max-width: 75%;
+    white-space: normal;
+  }
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(-2deg);
+  }
+  20% {
+    transform: rotate(2deg);
+  }
+  30% {
+    transform: rotate(-2deg);
+  }
+  40% {
+    transform: rotate(2deg);
+  }
+  50% {
+    transform: rotate(-2deg);
+  }
+  60% {
+    transform: rotate(2deg);
+  }
+  70% {
+    transform: rotate(-2deg);
+  }
+  80% {
+    transform: rotate(2deg);
+  }
+  90% {
+    transform: rotate(-2deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@media (min-width: 1144px) {
+  .title-span {
+    display: block; /* Stack the spans on separate lines */
+  }
+}
+
+/* And for greater than 935px */
+@media (max-width: 1144px) {
+  .title-span {
+    display: inline; /* Keep the spans on the same line */
+  }
+}
