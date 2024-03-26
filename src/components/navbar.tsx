@@ -44,28 +44,28 @@ export default function Navbar() {
             <Link
               target="_blank"
               href="https://www.linkedin.com/company/learneffinity/"
-              className="text-icon-primary"
+              className="text-icon-primary hover:text-icon-primary/70 transition-all duration-300 ease-in-out"
             >
               <AiFillLinkedin size={24} />
             </Link>
             <Link
               target="_blank"
               href="https://discord.gg/mpBfqw5BG8"
-              className="text-icon-primary"
+              className="text-icon-primary hover:text-icon-primary/70 transition-all duration-300 ease-in-out"
             >
               <FaDiscord size={24} />
             </Link>
             <Link
               target="_blank"
               href="https://www.instagram.com/learneffinity/"
-              className="text-icon-primary"
+              className="text-icon-primary hover:text-icon-primary/70 transition-all duration-300 ease-in-out"
             >
               <FaInstagram size={24} />
             </Link>
             <Link
               target="_blank"
               href="https://twitter.com/learneffinity"
-              className="text-icon-primary"
+              className="text-icon-primary hover:text-icon-primary/70 transition-all duration-300 ease-in-out"
             >
               <FaXTwitter size={24} />
             </Link>
