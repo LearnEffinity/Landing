@@ -1,137 +1,88 @@
 /* Base styles */
-body,
-html {
+body, html {
   margin: 0;
   padding: 0;
   font-family: "Poppins", sans-serif;
 }
 
 /* Base styles for the hero section */
-/* Base styles for the hero section */
 .hero-section {
-  color: black;
-  max-height: 828px;
   display: flex;
-  flex-direction: column;
-  align-items: center; /* Centers content horizontally */
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  /* justify-content: center; */
-  padding-bottom: 36px; /* Space at the bottom */
-  height: 100vh; /* Adjust the height as needed */
+  height: 100vh;
+  color: black;
+  position: relative;
+
 }
 
-/* Container for your content with max-width for larger screens and margins for responsiveness */
+/* Centered content container */
 .content-container {
-  height: 100%;
-  max-width: 1248px;
-  width: 100%; /* This ensures that the container takes up 100% of the hero-section width */
-  margin: 0 auto; /* This will center the container */
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  width: 70%; /* Content takes up 70% of the hero section's width */
   gap: 36px;
-  padding: 0 20px; /* Padding on the sides for smaller screens */
-  position: relative;
+  z-index: 2;
 }
 
-/* Responsive typography */
-.title,
-.subtitle {
-  padding: 0 40px; /* Padding for smaller screens */
-}
 
-.title {
-  font-family: "Poppins", sans-serif;
-  font-size: 3vw; /* Adjust font size based on screen width */
-  font-weight: 600;
-  line-height: 1.2;
-  color: #080808;
-  min-width: 992px;
-  min-width: 652px;
-  text-align: center;
-}
-
-.title-part1,
-.title-part2 {
-  display: block; /* Stack the title parts on separate lines */
-}
-
-.title-part2 {
-  background: linear-gradient(90deg, #583afe 0%, #ea0038 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.subtitle {
-  font-family: "Poppins", sans-serif;
-  font-size: 1.5vw; /* Adjust font size based on screen width */
-  font-weight: 500;
-  color: #505055;
-  text-align: center;
-  max-width: 576px; /* Max width to contain the text */
-}
-
-/* Responsive input and button styling */
-
-/* Hide backdrop images on smaller screens and position them relatively on larger screens */
 .backdrop {
   position: absolute;
-  z-index: 0; /* Below content */
-  display: block;
-  width: 15%; /* Responsive size */
+  width: auto;
+  
 }
+
+
+/* Positions for the images */
 .board {
+  top: 10%;
+  left: 10%;
   transform: rotate(-18deg);
-  /* Use percentage (%) for left property to make it relative to the container's width */
-  left: 10%; /* Adjust as needed */
-  top: 5%; /* Adjust as needed */
-  max-width: 180px;
 }
 
 .study {
-  transform: rotate(10deg);
   top: 10%;
-  left: 70%; /* Adjust as needed */
-  max-width: 200px;
+  right: 10%;
+  transform: rotate(10deg);
 }
 
 .trophy {
+  bottom: 10%;
+  left: 35%;
   transform: rotate(20deg);
-  top: 70%;
-  left: 55%; /* Adjust as needed */
-  max-width: 184px;
 }
 
 .card {
-  top: 60%;
-  left: 15%; /* Adjust as needed */
-  max-width: 180px;
+  bottom: 10%;
+  right: 35%;
 }
 
 .star {
-  top: 34%;
-  left: 11%; /* Adjust as needed */
-  max-width: 94px;
+  bottom: 20%;
+  left: 15%;
 }
 
 .calculator {
-  transform: rotate(-30deg); /* Correct the rotation */
-  top: 42%;
-  left: 67%; /* Adjust as needed */
-  max-width: 180px;
+  top: 20%;
+  right: 2%;
+  transform: rotate(-30deg);
 }
+
 @media (max-width: 768px) {
   .backdrop {
-    /* Scale down icons */
-    transform: scale(0.8);
+    transform: scale(0.6);
   }
 }
 
-@media (max-width: 450px) {
-  /* Hide elements not necessary for small screens */
-  .backdrop,
-  .subtitle {
+@media (max-width: 600px) {
+  .backdrop {
     display: none;
+  }
+
+  .content-container {
+    width: 100%;
   }
 }
