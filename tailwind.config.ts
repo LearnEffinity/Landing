@@ -10,6 +10,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      maxWidth: {
+        '3xl': '32rem', // or any other value you need
+      },
       colors: {
         brand: {
           primary: "#4D37C9",
