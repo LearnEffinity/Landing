@@ -200,7 +200,7 @@ export default function FeaturesSection() {
         <img
           src="/features/Coin.png"
           alt=""
-          className="absolute -bottom-10 -right-10 h-20 w-20 lg:h-auto lg:w-auto lg:scale-75 desktop:scale-100"
+          className="absolute -bottom-10 -right-2 lg:-right-10 h-20 w-20 lg:h-auto lg:w-auto lg:scale-75 desktop:scale-100"
         />
       </FeatureCard>
       <Connector direction="left" />
@@ -219,7 +219,7 @@ export default function FeaturesSection() {
         <img
           src="/features/Pig.png"
           alt=""
-          className="absolute -bottom-10 -right-10 h-20 w-20 lg:left-8 lg:h-auto lg:w-auto lg:scale-75 desktop:scale-100"
+          className="absolute -bottom-10 -right-2 lg:-right-10 h-20 w-20 lg:left-8 lg:h-auto lg:w-auto lg:scale-75 desktop:scale-100"
         />
       </FeatureCard>
       <Connector direction="right" />
@@ -238,7 +238,7 @@ export default function FeaturesSection() {
         <img
           src="/features/Money.png"
           alt=""
-          className="absolute -bottom-10 -right-10 h-24 w-24 lg:right-8 lg:top-0 lg:h-auto lg:w-auto lg:scale-75 desktop:scale-100"
+          className="absolute -bottom-10 -right-2 sm:-right-10 h-24 w-24 lg:right-8 lg:top-0 lg:h-auto lg:w-auto lg:scale-75 desktop:scale-100"
         />
       </FeatureCard>
     </section>
