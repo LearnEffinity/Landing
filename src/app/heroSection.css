@@ -1,5 +1,6 @@
 /* Base styles */
-body, html {
+body,
+html {
   margin: 0;
   padding: 0;
   font-family: "Poppins", sans-serif;
@@ -14,7 +15,6 @@ body, html {
   height: 100vh;
   color: black;
   position: relative;
-
 }
 
 /* Centered content container */
@@ -33,13 +33,20 @@ body, html {
   z-index: 0; /* Below content */
   display: block;
   width: 15%; /* Responsive size */
+
+  transition: transform 0.3s ease-in-out;
 }
+
+.backdrop:hover {
+  animation: wiggle 1s ease-in-out infinite;
+}
+
 .board {
   transform: rotate(-18deg);
   /* Use percentage (%) for left property to make it relative to the container's width */
   left: 10%; /* Adjust as needed */
   top: 5%; /* Adjust as needed */
-  max-width: 180px ;
+  max-width: 180px;
 }
 
 .study {
@@ -81,7 +88,6 @@ body, html {
   }
 }
 
-
 @media (max-width: 600px) {
   .backdrop {
     display: none;
@@ -89,5 +95,41 @@ body, html {
 
   .content-container {
     width: 100%;
+  }
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(-2deg);
+  }
+  20% {
+    transform: rotate(2deg);
+  }
+  30% {
+    transform: rotate(-2deg);
+  }
+  40% {
+    transform: rotate(2deg);
+  }
+  50% {
+    transform: rotate(-2deg);
+  }
+  60% {
+    transform: rotate(2deg);
+  }
+  70% {
+    transform: rotate(-2deg);
+  }
+  80% {
+    transform: rotate(2deg);
+  }
+  90% {
+    transform: rotate(-2deg);
+  }
+  100% {
+    transform: rotate(0deg);
   }
 }
