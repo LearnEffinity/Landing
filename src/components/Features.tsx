@@ -42,31 +42,31 @@ function FeatureCard({
     },
     {
       scope: containerRef,
-    }
+    },
   );
 
   return (
     <div
-      className={`w-full relative flex items-center py-12 md:py-28 justify-center ${alignment}`}
+      className={`relative flex w-full items-center justify-center py-12 lg:py-28 ${alignment}`}
     >
       <div
         ref={containerRef}
-        className="card w-full h-full desktop:max-w-[1038px] md:max-w-[580px] desktop:h-[556px] md:h-[354px] grid place-items-center p-1 rounded-2xl md:rounded-[42px]"
+        className="card grid h-full w-max place-items-center rounded-2xl p-1 lg:h-[354px] lg:w-full lg:max-w-screen-md lg:rounded-[42px] desktop:h-[556px] desktop:max-w-[1038px]"
       >
         <div
-          className={`w-full h-full border-white border-5 ring-4 ring-offset-4 duration-500 transition-shadow ring-surface-secondary md:rounded-4xl rounded-2xl flex md:p-16 z-10 ${className}`}
+          className={`border-5 relative z-10 flex h-full w-full flex-col items-start rounded-[14px] border-white p-5 ring-4 ring-surface-secondary ring-offset-4 transition-shadow duration-500 lg:static lg:flex-row lg:rounded-4xl lg:p-16 ${className}`}
         >
           {children}
-          <div className="flex flex-col gap-4 w-full text-white max-w-[500px] relative">
+          <div className="relative flex w-full max-w-[500px] flex-col gap-4 text-white">
             <span
-              className={`absolute -z-10 select-none font-semibold desktop:text-[240px]/[240px] text-[152px]/[152px ${textClassName}`}
+              className={`absolute right-0 -z-10 -translate-y-full select-none text-[152px]/[152px] font-semibold lg:translate-y-0 desktop:text-[240px]/[240px] ${textClassName}`}
             >
               {index.toString().padStart(2, "0")}
             </span>
-            <h2 className="font-semibold desktop:text-3xl/12 md:text-2xl/9">
+            <h2 className="text-xl/7 font-semibold lg:text-2xl/9 desktop:text-3xl/12">
               {heading}
             </h2>
-            <p className="font-medium desktop:text-lg/8 md:text-base/6">
+            <p className="text-base/6 font-medium lg:text-base/6 desktop:text-lg/8">
               {paragraph}
             </p>
           </div>
@@ -92,7 +92,7 @@ function Connector({ direction }: { direction: "left" | "right" }) {
     },
     {
       scope: pathRef,
-    }
+    },
   );
 
   // * If you want the gradient to genuinely follow the path, you can use the below code (it's not worth it)
@@ -157,22 +157,20 @@ function Connector({ direction }: { direction: "left" | "right" }) {
       // ref={svgRef}
       viewBox="0 0 287 192"
       fill="none"
-      className={`max-w-[25%] -my-12 md:-my-28 ${
+      className={`-my-12 max-w-[25%] lg:-my-28 ${
         direction === "left" && "-scale-x-100"
       }`}
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
         d="M285 192V118.292C285 107.246 276.046 98.2918 265 98.2918H22C10.9543 98.2918 2 89.3375 2 78.2918V0"
-        strokeWidth="4"
-        className="animate-gradient-stroke"
+        className="animate-gradient-stroke stroke-[9] sm:stroke-[4]"
       />
       <path
         ref={pathRef}
         d="M285 192V118.292C285 107.246 276.046 98.2918 265 98.2918H22C10.9543 98.2918 2 89.3375 2 78.2918V0"
         stroke="#EFEEF6"
-        strokeWidth="5"
-        className="transition-opacity duration-100"
+        className="stroke-[10] transition-opacity duration-100 sm:stroke-[5]"
       />
     </svg>
   );
@@ -191,18 +189,18 @@ export default function FeaturesSection() {
           </>
         }
         paragraph="Who said learning about money has to be dull? With our gamified approach, you'll be mastering finance while having a blast!"
-        className="bg-brand-primary justify-end"
-        textClassName="bottom-0 left-0 -translate-x-1/2 -translate-y-8 text-brand-primary-dark"
+        className="bg-brand-primary lg:items-center lg:justify-end"
+        textClassName="lg:bottom-0 lg:left-0 desktop:-translate-x-1/2 desktop:-translate-y-8 text-brand-primary-dark"
       >
         <img
           src="/features/Feature-Image-1.png"
           alt=""
-          className="absolute top-0 left-0"
+          className="top-0 h-full max-h-96 lg:absolute lg:max-h-none lg:-translate-x-3/4 desktop:h-auto desktop:-translate-x-full"
         />
         <img
           src="/features/Coin.png"
           alt=""
-          className="absolute right-0 bottom-0"
+          className="absolute -bottom-10 -right-10 h-20 w-20 lg:h-auto lg:w-auto lg:scale-75 desktop:scale-100"
         />
       </FeatureCard>
       <Connector direction="left" />
@@ -210,18 +208,18 @@ export default function FeaturesSection() {
         index={2}
         heading="Made for You: Personalize Your Learning Adventure Now!"
         paragraph="No two learners are the same, and neither are our paths! Discover a learning experience designed just for you."
-        className="bg-brand-secondary justify-center items-center"
-        textClassName="inset-0 text-brand-secondary-dark desktop:-translate-x-48 desktop:-translate-y-24"
+        className="bg-brand-secondary lg:items-center lg:justify-center"
+        textClassName="lg:inset-0 text-brand-secondary-dark desktop:-translate-x-48 desktop:-translate-y-24"
       >
         <img
           src="/features/Feature-Image-2.png"
           alt=""
-          className="absolute right-0 top-0"
+          className="top-0 h-full max-h-96 lg:absolute lg:max-h-none lg:translate-x-[110%] desktop:h-auto"
         />
         <img
           src="/features/Pig.png"
           alt=""
-          className="absolute left-8 bottom-0"
+          className="absolute -bottom-10 -right-10 h-20 w-20 lg:left-8 lg:h-auto lg:w-auto lg:scale-75 desktop:scale-100"
         />
       </FeatureCard>
       <Connector direction="right" />
@@ -229,18 +227,18 @@ export default function FeaturesSection() {
         index={3}
         heading="Quick and Easy: Digestible Financial Lessons at Your Fingertips!"
         paragraph="Short on time? No problem! Our bite-sized lessons deliver big on knowledge without taking up too much of your day."
-        className="bg-brand-accent justify-end items-end"
-        textClassName="inset-0 text-brand-accent-dark -translate-x-1/4 -translate-y-1/2"
+        className="bg-brand-accent lg:items-end lg:justify-end"
+        textClassName="lg:inset-0 text-brand-accent-dark desktop:-translate-x-1/4 desktop:-translate-y-1/2"
       >
         <img
           src="/features/Feature-Image-3.png"
           alt=""
-          className="absolute inset-0"
+          className="top-0 h-full max-h-96 lg:absolute lg:max-h-none lg:-translate-x-[200%] desktop:h-auto"
         />
         <img
           src="/features/Money.png"
           alt=""
-          className="absolute right-8 top-0"
+          className="absolute -bottom-10 -right-10 h-24 w-24 lg:right-8 lg:top-0 lg:h-auto lg:w-auto lg:scale-75 desktop:scale-100"
         />
       </FeatureCard>
     </section>

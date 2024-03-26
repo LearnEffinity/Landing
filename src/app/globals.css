@@ -21,4 +21,8 @@
   .card.active > div {
     box-shadow: none;
   }
+
+  .card img {
+    @apply object-contain;
+  }
 }

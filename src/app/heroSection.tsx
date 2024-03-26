@@ -50,7 +50,7 @@ const HeroSection: React.FC = () => {
       <img
         src="/heroIcons/Card-1.png"
         alt="Card icon"
-        className="backdrop card"
+        className="backdrop credit"
       />
     </div>
   );
