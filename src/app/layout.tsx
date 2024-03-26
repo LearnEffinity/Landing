@@ -26,7 +26,7 @@ export default function RootLayout({
       >
         <ThemeProvider>
           <Navbar />
-          <main className="mx-auto w-full max-w-full overflow-hidden px-4 desktop:max-w-screen-desktop desktop:px-0">
+          <main className="mx-auto w-full max-w-full px-4 desktop:max-w-screen-desktop desktop:px-0">
             {children}
           </main>
           <Footer />
