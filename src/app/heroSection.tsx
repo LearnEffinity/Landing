@@ -21,53 +21,53 @@ const HeroSection: React.FC = () => {
         <SignUpButton />
       </div>
       <motion.img
-          src="/heroIcons/Board.png"
-          alt="Descriptive alt text"
-          className="backdrop board"
-          initial={{ y: 0, opacity: 1 }}
-          whileHover={{ y: -10, opacity: 0.8 }}
-          transition={{ type: "spring", stiffness: 300 }}
-        />
-        <motion.img
-          src="/heroIcons/trophy.png"
-          alt="Descriptive alt text"
-          className="backdrop trophy"
-          initial={{ y: 0, opacity: 1 }}
-          whileHover={{ y: -10, opacity: 0.8 }}
-          transition={{ type: "spring", stiffness: 300 }}
-        />
-        <motion.img
-          src="/heroIcons/Online-Study.png"
-          alt="Descriptive alt text"
-          className="backdrop study"
-          initial={{ y: 0, opacity: 1 }}
-          whileHover={{ y: -10, opacity: 0.8 }}
-          transition={{ type: "spring", stiffness: 300 }}
-        />
-        <motion.img
-          src="/heroIcons/Star-1.png"
-          alt="Descriptive alt text"
-          className="backdrop star"
-          initial={{ y: 0, opacity: 1 }}
-          whileHover={{ y: -10, opacity: 0.8 }}
-          transition={{ type: "spring", stiffness: 300 }}
-        />
-        <motion.img
-          src="/heroIcons/Calculator-1.png"
-          alt="Descriptive alt text"
-          className="backdrop calculator"
-          initial={{ y: 0, opacity: 1 }}
-          whileHover={{ y: -10, opacity: 0.8 }}
-          transition={{ type: "spring", stiffness: 300 }}
-        />
-        <motion.img
-          src="/heroIcons/Card-1.png"
-          alt="Descriptive alt text"
-          className="backdrop card"
-          initial={{ y: 0, opacity: 1 }}
-          whileHover={{ y: -10, opacity: 0.8 }}
-          transition={{ type: "spring", stiffness: 300 }}
-        />
+                src="/heroIcons/Board.png"
+                alt="Descriptive alt text"
+                className="backdrop board"
+                initial={{ y: 0, opacity: 1 }}
+                whileHover={{ y: -10, opacity: 0.8 }}
+                transition={{ type: "spring", stiffness: 300 }}
+            />
+            <motion.img
+                src="/heroIcons/trophy.png"
+                alt="Descriptive alt text"
+                className="backdrop trophy"
+                initial={{ y: 0, opacity: 1 }}
+                whileHover={{ y: -10, opacity: 0.8 }}
+                transition={{ type: "spring", stiffness: 300 }}
+            />
+            <motion.img
+                src="/heroIcons/Online-Study.png"
+                alt="Descriptive alt text"
+                className="backdrop study"
+                initial={{ y: 0, opacity: 1 }}
+                whileHover={{ y: -10, opacity: 0.8 }}
+                transition={{ type: "spring", stiffness: 300 }}
+            />
+            <motion.img
+                src="/heroIcons/Star-1.png"
+                alt="Descriptive alt text"
+                className="backdrop star"
+                initial={{ y: 0, opacity: 1 }}
+                whileHover={{ y: -10, opacity: 0.8 }}
+                transition={{ type: "spring", stiffness: 300 }}
+            />
+            <motion.img
+                src="/heroIcons/Calculator-1.png"
+                alt="Descriptive alt text"
+                className="backdrop calculator"
+                initial={{ y: 0, opacity: 1 }}
+                whileHover={{ y: -10, opacity: 0.8 }}
+                transition={{ type: "spring", stiffness: 300 }}
+            />
+            <motion.img
+                src="/heroIcons/Card-1.png"
+                alt="Descriptive alt text"
+                className="backdrop card"
+                initial={{ y: 0, opacity: 1 }}
+                whileHover={{ y: -10, opacity: 0.8 }}
+                transition={{ type: "spring", stiffness: 300 }}
+            />
     </div>
   );
 };

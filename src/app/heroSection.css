@@ -28,54 +28,59 @@ body, html {
   z-index: 2;
 }
 
-
 .backdrop {
   position: absolute;
-  width: auto;
-  
+  z-index: 0; /* Below content */
+  display: block;
+  width: 15%; /* Responsive size */
 }
-
-
-/* Positions for the images */
 .board {
-  top: 10%;
-  left: 10%;
   transform: rotate(-18deg);
+  /* Use percentage (%) for left property to make it relative to the container's width */
+  left: 10%; /* Adjust as needed */
+  top: 5%; /* Adjust as needed */
+  max-width: 180px ;
 }
 
 .study {
-  top: 10%;
-  right: 10%;
   transform: rotate(10deg);
+  top: 10%;
+  left: 70%; /* Adjust as needed */
+  max-width: 200px;
 }
 
 .trophy {
-  bottom: 10%;
-  left: 35%;
   transform: rotate(20deg);
+  top: 70%;
+  left: 55%; /* Adjust as needed */
+  max-width: 184px;
 }
 
 .card {
-  bottom: 10%;
-  right: 35%;
+  top: 60%;
+  left: 15%; /* Adjust as needed */
+  max-width: 180px;
 }
 
 .star {
-  bottom: 20%;
-  left: 15%;
+  top: 34%;
+  left: 11%; /* Adjust as needed */
+  max-width: 94px;
 }
 
 .calculator {
-  top: 20%;
-  right: 2%;
-  transform: rotate(-30deg);
+  transform: rotate(-30deg); /* Correct the rotation */
+  top: 42%;
+  left: 67%; /* Adjust as needed */
+  max-width: 180px;
 }
-
 @media (max-width: 768px) {
   .backdrop {
-    transform: scale(0.6);
+    /* Scale down icons */
+    transform: scale(0.8);
   }
 }
+
 
 @media (max-width: 600px) {
   .backdrop {
