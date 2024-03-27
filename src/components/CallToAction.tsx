@@ -100,17 +100,15 @@ export default function CallToAction() {
         </div>
         <div className="flex flex-col justify-start order-2 lg:order-none">
           <div className="text-center ">
-            <h1 className="text-[24px] md:text-[52px] text-center font-[600]">
+            <h2 className="text-2xl md:text-[52px]/[76px] text-center font-semibold pb-4 flex flex-col">
               Ready to go to
-            </h1>
-            <h1 className="text-[24px] md:text-[52px] font-[600] bg-gradient-to-r from-decorative-blue to-decorative-red text-transparent bg-clip-text pb-[16px]">
-              Effinity and Beyond?
-            </h1>
-            <div className="flex justify-center">
-              <h1 className="text-[16px] md:text-[18px] font-[400] w-[360px] md:w-full">
-                Take control of your financial journey. Get started - for free.
-              </h1>
-            </div>
+              <span className="bg-gradient-to-r from-decorative-blue to-decorative-red text-transparent bg-clip-text">
+                Effinity and Beyond?
+              </span>
+            </h2>
+            <p className="flex justify-center md:text-lg w-full md:max-w-none max-w-[360px]">
+              Take control of your financial journey. Get started - for free.
+            </p>
           </div>
           <SignUpForm />
         </div>

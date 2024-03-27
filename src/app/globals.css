@@ -5,3 +5,24 @@
 * {
   scroll-behavior: smooth;
 }
+
+@layer components {
+  .card {
+    @apply animate-gradient-x;
+    background-image: linear-gradient(
+      90deg,
+      theme("colors.decorative.purple") 0%,
+      theme("colors.decorative.pink") 50%,
+      theme("colors.decorative.purple") 100%
+    );
+    background-size: 200% 100%;
+  }
+
+  .card.active > div {
+    box-shadow: none;
+  }
+
+  .card img {
+    @apply object-contain;
+  }
+}

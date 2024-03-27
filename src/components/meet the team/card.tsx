@@ -32,7 +32,7 @@ const Card: React.FC<CardProps> = ({ member, isCurrentIndex }) => {
           alt="Memoji"
           className="mb-10"
         />
-        <h1 className="font-semibold text-2xl">{member.name}</h1>
+        <h3 className="font-semibold text-center text-2xl">{member.name}</h3>
         <p className="font-medium text-lg text-text-tertiary mt-1">
           {member.role}
         </p>

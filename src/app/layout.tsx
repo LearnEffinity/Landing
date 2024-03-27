@@ -21,10 +21,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${poppins.className} bg-surface-primary min-h-screen`}>
+      <body
+        className={`${poppins.className} max-w-screen min-h-screen overflow-x-hidden bg-surface-primary`}
+      >
         <ThemeProvider>
           <Navbar />
-          <main className="w-full mx-auto max-w-screen-desktop px-4 desktop:px-0">
+          <main className="mx-auto w-full max-w-full px-4 desktop:max-w-screen-desktop desktop:px-0">
             {children}
           </main>
           <Footer />
