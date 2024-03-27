@@ -24,29 +24,29 @@ export default function SignUpButton() {
 
   return (
     <form
-      className="flex items-center justify-center mx-auto mt-8"
+      className="mx-auto mt-8 flex items-center justify-center"
       onSubmit={handleSubmit}
     >
       {submitted ? (
-        <div className="text-lg w-[360px] h-[56px] md:w-[576px] md:h-[64px] rounded-2xl bg-gradient-to-r from-decorative-blue to-decorative-red bg-clip-border p-[3px]">
-          <div className="bg-surface-secondary w-full h-full rounded-xl flex justify-center items-center">
-            <p>You've joined the waitlist!</p>
+        <div className="h-[56px] w-[360px] rounded-2xl bg-gradient-to-r from-decorative-blue to-decorative-red bg-clip-border p-[3px] text-lg md:h-[64px] md:w-[576px]">
+          <div className="flex h-full w-full items-center justify-center rounded-xl bg-surface-secondary">
+            <p>You&apos;ve joined the waitlist!</p>
           </div>
         </div>
       ) : (
-        <div className="relative w-[360px] h-[56px] md:w-[576px] md:h-[64px]">
+        <div className="relative h-[56px] w-[360px] md:h-[64px] md:w-[576px]">
           <input
-            className="block ps-3 w-full h-full text-sm text-gray-90 rounded-xl focus:border-2 focus:border-brand-accent focus:outline-none bg-surface-secondary placeholder-text-tertiary"
+            className="text-gray-90 block h-full w-full rounded-xl bg-surface-secondary ps-3 text-sm placeholder-text-tertiary focus:border-2 focus:border-brand-accent focus:outline-none"
             placeholder="Email Address..."
             name="email"
           />
           <button
             type="submit"
-            className="text-white absolute w-[122px] h-[40px] end-4 bottom-[9.5px] md:bottom-[12px] bg-brand-accent hover:bg-brand-primary font-medium rounded-lg text-sm px-5 py-2"
+            className="absolute bottom-[9.5px] end-4 h-[40px] w-[122px] rounded-lg bg-brand-accent px-5 py-2 text-sm font-medium text-white hover:bg-brand-primary md:bottom-[12px]"
             disabled={loading}
           >
             {loading ? (
-              <div className="animate-spin h-4 w-4 border-t-2 border-b-2 border-white rounded-full mx-auto"></div>
+              <div className="mx-auto h-4 w-4 animate-spin rounded-full border-b-2 border-t-2 border-white"></div>
             ) : (
               "Join Beta!"
             )}
