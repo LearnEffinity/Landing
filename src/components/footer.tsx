@@ -33,7 +33,7 @@ const Logo = (
 const Footer = () => {
   return (
     <footer className="flex h-[186px] flex-wrap items-center justify-between rounded-t-4xl bg-[#EFEEF6] px-4 py-4 sm:px-10 md:h-[224px]">
-      <div className="mb-4 flex w-full flex-col items-center md:gap-6 text-center sm:mb-0 sm:w-auto sm:items-start sm:text-left">
+      <div className="mb-4 flex w-full flex-col items-center md:gap-4 text-center sm:mb-0 sm:w-auto sm:items-start sm:text-left">
         {Logo}
         <p className="text-text">
           Copyright © 2024 Effinity Inc. All Rights reserved.
