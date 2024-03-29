@@ -11,16 +11,17 @@ const TeamDetails = [
     description:
       "Building products, flipping balisongs, savoring onigiri - each it's own masterpiece.",
     image: "/memojis/justin.png",
+    linkedin: "https://www.linkedin.com/in/justinquann/",
     category: "Leadership",
   },
-
   {
     id: 2,
     name: "Mia Laylo",
     role: "Lead Designer",
     description:
-      "A bookworm who enjoys iced matcha tea lattes, has a LEGO addiction, and playing cozy games on my switch.",
+      "A bookworm who enjoys iced matcha tea lattes, has a LEGO addiction, and playing cozy games.",
     image: "/memojis/mia.png",
+    linkedin: "https://www.linkedin.com/in/mialaylo/",
     category: "Leadership",
   },
   {
@@ -30,6 +31,7 @@ const TeamDetails = [
     description:
       "I like building things, I play many video games, watch anime and eating biryani!",
     image: "/memojis/pranith.png",
+    linkedin: "https://www.linkedin.com/in/pranith-molakalapalli/",
     category: "Leadership",
   },
   // Developers
@@ -40,6 +42,7 @@ const TeamDetails = [
     description:
       "I like biryani and coding, but not together because I want to enjoy my biryani.",
     image: "/memojis/aditya.png",
+    linkedin: "https://www.linkedin.com/in/adityasahas/",
     category: "Developers",
   },
   {
@@ -48,6 +51,7 @@ const TeamDetails = [
     role: "Frontend",
     description: "My dream is to one day pass the Turing test.",
     image: "/memojis/michael.png",
+    linkedin: "https://linkedin.com/in/michaelbeck0",
     category: "Developers",
   },
   {
@@ -57,6 +61,7 @@ const TeamDetails = [
     description:
       "I want to star in a Batman sitcom where I make cheesy dad jokes during fights.",
     image: "/memojis/shashank.png",
+    linkedin: "https://www.linkedin.com/in/shashank-sinha03/",
     category: "Developers",
   },
   {
@@ -66,6 +71,7 @@ const TeamDetails = [
     description:
       "Sometimes it's Codezeen & sometimes its Chefzeen. If you treat life like minecraft, it makes it better!",
     image: "/memojis/razeen.png",
+    linkedin: "https://www.linkedin.com/in/razeenali/",
     category: "Developers",
   },
   {
@@ -75,6 +81,7 @@ const TeamDetails = [
     description:
       "Just your average matcha loving CS girlie. Sometimes, I write and game.",
     image: "/memojis/akshitha.png",
+    linkedin: "https://www.linkedin.com/in/akshitha-nagaraj-3986701bb/",
     category: "Developers",
   },
   // Designers
@@ -84,6 +91,7 @@ const TeamDetails = [
     role: "UX / UI Designer",
     description: "I survive off of true crime shows and reality tv.",
     image: "/memojis/joanna.png",
+    linkedin: "https://www.linkedin.com/in/joannalau11/",
     category: "Designers",
   },
   {
@@ -93,6 +101,7 @@ const TeamDetails = [
     description:
       "Data nerd. Designer. Cat mom. Somehow always living life to the fullest ..or on the edge?",
     image: "/memojis/alena.png",
+    linkedin: "https://www.linkedin.com/in/Alena-you",
     category: "Designers",
   },
   {
@@ -102,6 +111,7 @@ const TeamDetails = [
     description:
       "Design, photography and cinema are some of the things I like.",
     image: "/memojis/sarah.png",
+    linkedin: "https://www.linkedin.com/in/discoverwithsaraw/",
     category: "Designers",
   },
   {
@@ -111,6 +121,7 @@ const TeamDetails = [
     description:
       "From piano keys to Keynote: crafting beautiful experiences for the audience.",
     image: "/memojis/giselle.png",
+    linkedin: "https://www.linkedin.com/in/giselle-nguyen/",
     category: "Designers",
   },
   {
@@ -120,29 +131,35 @@ const TeamDetails = [
     description:
       "Rad dad. Curious designer. Serious optimist. Life's too short to not be smiling.",
     image: "/memojis/travis.png",
+    linkedin: "https://www.linkedin.com/in/travis-fleming111/",
     category: "Designers",
   },
 ];
 
 const Carousel = ({ selected }: { selected: any }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentGroup, setCurrentGroup] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
 
   const filteredTeam = TeamDetails.filter(
-    (member) => member.category === selected
+    (member) => member.category === selected,
   );
 
   const handlePrevClick = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? filteredTeam.length - 1 : prevIndex - 1
+    setCurrentGroup((prevGroup) =>
+      prevGroup === 0
+        ? Math.ceil(filteredTeam.length / visibleCards) - 1
+        : prevGroup - 1,
     );
   };
 
   const handleNextClick = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === filteredTeam.length - 1 ? 0 : prevIndex + 1
+    setCurrentGroup((prevGroup) =>
+      prevGroup === Math.ceil(filteredTeam.length / visibleCards) - 1
+        ? 0
+        : prevGroup + 1,
     );
   };
+
   const checkScreenSize = () => {
     setIsMobile(window.innerWidth <= 768); // Adjust the breakpoint as needed
   };
@@ -155,60 +172,89 @@ const Carousel = ({ selected }: { selected: any }) => {
     };
   }, []);
 
-  const visibleCards = isMobile ? 1 : 3;
-  const totalCards = filteredTeam.length;
-  const getCardIndex = (index: number) =>
-    (currentIndex + index - Math.floor(visibleCards / 2) + totalCards) %
-    totalCards;
+  useEffect(() => {
+    setCurrentGroup(0);
+  }, [selected]);
 
-  const showNavigationControls = totalCards > visibleCards;
+  const visibleCards = isMobile ? 1 : 3;
+  const totalGroups = Math.ceil(filteredTeam.length / visibleCards);
+
+  const getCardIndex = (index: number) => {
+    const groupStartIndex = currentGroup * visibleCards;
+    return groupStartIndex + index;
+  };
+
+  const showNavigationControls = totalGroups > 1;
 
   return (
     <>
-      <div className="relative w-full overflow-hidden">
+      <div className="relative w-full">
         {/* <AnimatePresence initial={false} custom={currentIndex}> */}
         <motion.div
-          key={currentIndex}
-          custom={currentIndex}
-          // initial={{ x: "100%" }}
+          key={currentGroup}
           initial={false}
           animate={{ x: "0%" }}
           exit={{ x: "-100%" }}
           transition={{ duration: 0.5, ease: "easeInOut" }}
           className="flex justify-center gap-8"
         >
-          {Array.from({ length: visibleCards }).map((_, index) => (
-            <Card
-              key={filteredTeam[getCardIndex(index)].id}
-              member={filteredTeam[getCardIndex(index)]}
-              isCurrentIndex={getCardIndex(index) === currentIndex}
-            />
-          ))}
+          {Array.from({ length: visibleCards }).map((_, index) => {
+            const cardIndex = getCardIndex(index);
+            if (cardIndex < filteredTeam.length) {
+              return (
+                <Card
+                  key={filteredTeam[cardIndex].id}
+                  member={filteredTeam[cardIndex]}
+                  isCurrentIndex={false}
+                />
+              );
+            }
+            return null;
+          })}
         </motion.div>
         {/* </AnimatePresence> */}
       </div>
       {showNavigationControls && (
         <>
-          <div className="flex justify-center items-center space-x-2 mt-10">
+          <div className="mt-10 flex items-center justify-center">
             <button
               onClick={handlePrevClick}
-              className="w-14 h-14 text-2xl text-text-primary hover:bg-[#BCBBC3] transition-all duration-300 ease-in-out bg-surface-secondary rounded-full flex justify-center items-center"
+              className="mr-6 flex h-14 w-14 items-center justify-center rounded-full bg-surface-secondary text-2xl text-text-primary transition-all duration-300 ease-in-out hover:bg-[#BCBBC3]"
             >
               <IoIosArrowBack />
             </button>
 
-            {filteredTeam.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentIndex(index)}
-                className={`w-3 h-3 rounded-full ${
-                  index === currentIndex ? "bg-brand-accent" : "bg-gray-300"
-                }`}
-              ></button>
-            ))}
+            <div className="flex items-center gap-x-1">
+              {Array.from({ length: totalGroups }).map((_, index) => (
+                <div
+                  key={index}
+                  className="mx-[5px] flex items-center justify-center"
+                >
+                  <div
+                    className={`h-3 rounded-full transition-all duration-300 ease-in-out ${
+                      index === currentGroup
+                        ? "w-9 bg-brand-accent"
+                        : "w-3 bg-gray-200"
+                    }`}
+                    style={{
+                      animation: `${
+                        index === currentGroup
+                          ? "grow 0.3s ease-in-out forwards"
+                          : "shrink 0.3s ease-in-out forwards"
+                      }`,
+                    }}
+                  ></div>
+                  <button
+                    onClick={() => setCurrentGroup(index)}
+                    className="absolute h-3 w-9 cursor-pointer opacity-0"
+                  ></button>
+                </div>
+              ))}
+            </div>
+
             <button
               onClick={handleNextClick}
-              className="w-14 h-14 text-2xl text-text-primary hover:bg-[#BCBBC3] transition-all duration-300 ease-in-out bg-surface-secondary rounded-full flex justify-center items-center"
+              className="ml-6 flex h-14 w-14 items-center justify-center rounded-full bg-surface-secondary text-2xl text-text-primary transition-all duration-300 ease-in-out hover:bg-[#BCBBC3]"
             >
               <IoIosArrowForward />
             </button>
