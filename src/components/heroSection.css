@@ -19,7 +19,6 @@
   align-items: center;
   justify-content: center;
   width: 70%; /* Content takes up 70% of the hero section's width */
-  gap: 36px;
   z-index: 2;
 }
 
@@ -34,6 +33,8 @@
   background: linear-gradient(90deg, #583afe 0%, #ea0038 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  margin-bottom: 20px;
+  box-sizing: content-box;
 }
 
 .title-span-non {
@@ -41,18 +42,25 @@
   -webkit-text-fill-color: initial;
 }
 
+.subtitle{
+  margin-top: 0;
+  margin-bottom: 4px;
+}
 .backdrop {
   position: absolute;
   z-index: 0;
-  display: block;
-
+  /* max-width: 180px; Define a max-width for larger screens */
+  width: 15%; /* Scale based on the width of the viewport */
   transition: transform 0.3s ease-in-out;
 }
 
-.backdrop:hover {
-  animation: wiggle 1s ease-in-out infinite;
+/* Media query for viewports of at least 1440px wide */
+@media (min-width: 1440px) {
+  .backdrop {
+    width: auto; /* Width is auto to not exceed max-width */
+    max-width: 100%; /* Image can be as wide as its container */
+  }
 }
-
 .board {
   transform: rotate(-18deg);
 
@@ -81,10 +89,22 @@
   max-width: 180px;
 }
 
-.star {
-  top: 34%;
-  left: -3%;
-  max-width: 94px;
+
+@media (min-width: 1160px) {
+  .star {
+    top: 34%;
+    left: 3%;
+    max-width: 94px;
+  }
+}
+
+
+@media (max-width: 1159px) {
+  .star {
+    bottom: 40%;
+    left: 5%;
+    max-width: 94px;
+  }
 }
 
 .calculator {
@@ -93,7 +113,7 @@
   right: 0%;
   max-width: 180px;
 }
-@media (max-width: 768px) {
+@media (max-width: 768px) , (max-height: 800px) {
   .backdrop {
     transform: scale(0.8);
   }
@@ -106,7 +126,10 @@
   .trophy {
     transform: rotate(20deg) scale(0.8);
   }
+
 }
+
+
 
 @media (max-width: 600px) {
   .backdrop {

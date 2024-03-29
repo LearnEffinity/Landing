@@ -32,39 +32,39 @@ const Logo = (
 
 const Footer = () => {
   return (
-    <footer className="flex flex-wrap items-center justify-between px-4 sm:px-10 py-4 bg-[#EFEEF6] rounded-t-4xl h-[186px] md:h-[224px]">
-      <div className="flex flex-col items-center sm:items-start w-full sm:w-auto text-center sm:text-left mb-4 sm:mb-0">
+    <footer className="flex h-[186px] flex-wrap items-center justify-between rounded-t-4xl bg-[#EFEEF6] px-4 py-4 sm:px-10 md:h-[224px]">
+      <div className="mb-4 flex w-full flex-col items-center md:gap-4 text-center sm:mb-0 sm:w-auto sm:items-start sm:text-left">
         {Logo}
         <p className="text-text">
           Copyright © 2024 Effinity Inc. All Rights reserved.
         </p>
       </div>
-      <div className="flex justify-center sm:justify-between items-center w-full sm:w-auto">
+      <div className="flex w-full items-center justify-center sm:w-auto sm:justify-between">
         <Link
           target="_blank"
           href="https://www.linkedin.com/company/learneffinity/"
-          className="text-icon-primary mx-2"
+          className="mx-2 text-icon-primary"
         >
           <AiFillLinkedin size={24} />
         </Link>
         <Link
           target="_blank"
           href="https://discord.gg/mpBfqw5BG8"
-          className="text-icon-primary mx-2"
+          className="mx-2 text-icon-primary"
         >
           <FaDiscord size={24} />
         </Link>
         <Link
           target="_blank"
           href="https://www.instagram.com/learneffinity/"
-          className="text-icon-primary mx-2"
+          className="mx-2 text-icon-primary"
         >
           <FaInstagram size={24} />
         </Link>
         <Link
           target="_blank"
           href="https://twitter.com/learneffinity"
-          className="text-icon-primary mx-2"
+          className="mx-2 text-icon-primary"
         >
           <FaXTwitter size={24} />
         </Link>
