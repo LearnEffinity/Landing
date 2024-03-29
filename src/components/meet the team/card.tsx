@@ -33,7 +33,7 @@ const Card: React.FC<CardProps> = ({ member }) => {
             alt="Memoji"
             className="mb-10"
           />
-          <div className="flex h-[192px] w-[344px] flex-col items-center justify-between">
+          <div className="flex h-[192px] w-[320px] flex-col items-center justify-between sm:w-[344px]">
             <div>
               <h3 className="text-center text-2xl font-semibold">
                 {member.name}
@@ -47,7 +47,7 @@ const Card: React.FC<CardProps> = ({ member }) => {
             </div>
           </div>
         </div>
-        <div className="flex items-end justify-center pt-4">
+        <div className="flex items-end justify-center pt-12 sm:pt-4">
           <a href={member.linkedin} target="_blank">
             <FaLinkedin className="h-7 w-7 cursor-pointer text-black transition-colors duration-300 hover:text-black/60" />
           </a>
