@@ -12,20 +12,28 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: "Effinity",
   description:
-    "Explore Effinity, a gamified educational platform offering personalized content on technology and finance. Utilizing AI and big data, we provide tailored courses, articles, videos, and quizzes to match your interests and skill level.",
+    "Explore Effinity, a gamified educational platform offering personalized content on finance. Utilizing AI and big data, we provide tailored courses, articles, videos, and quizzes to match your interests and skill level.",
 
   openGraph: {
+    type: "website",
+    url: "https://effinity.vercel.app/",
+    siteName: "Effinity",
     title: "Effinity",
     description:
-      "Explore Effinity, a gamified educational platform offering personalized content on technology and finance. Utilizing AI and big data, we provide tailored courses, articles, videos, and quizzes to match your interests and skill level.",
+      "Explore Effinity, a gamified educational platform offering personalized content on finance. Utilizing AI and big data, we provide tailored courses, articles, videos, and quizzes to match your interests and skill level.",
     images: [
       {
         url: "/EffinityMetadataBanner.png",
-        width: 800,
-        height: 400,
-        alt: "Effinity",
       },
     ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    site: "@learneffinity",
+    images: "/EffinityMetadataBanner.png",
+    description:
+      "Explore Effinity, a gamified educational platform offering personalized content on finance. Utilizing AI and big data, we provide tailored courses, articles, videos, and quizzes to match your interests and skill level.",
   },
 };
 
@@ -37,14 +45,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="shortcut icon" href="favicon.ico" type="image/icon" />
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
         {/* Open Graph (All Social Medias almost) */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://effinity.vercel.app/" />
         <meta property="og:title" content="Effinity" />
         <meta
           property="og:description"
-          content="Explore Effinity, a gamified educational platform offering personalized content on technology and finance. Utilizing AI and big data, we provide tailored courses, articles, videos, and quizzes to match your interests and skill level."
+          content="Explore Effinity, a gamified educational platform offering personalized content on finance. Utilizing AI and big data, we provide tailored courses, articles, videos, and quizzes to match your interests and skill level."
         />
         <meta property="og:image" content="/EffinityMetadataBanner.png" />
         {/* Twitter */}
@@ -53,7 +61,7 @@ export default function RootLayout({
         <meta property="twitter:title" content="Effinity" />
         <meta
           property="twitter:description"
-          content="Explore Effinity, a gamified educational platform offering personalized content on technology and finance. Utilizing AI and big data, we provide tailored courses, articles, videos, and quizzes to match your interests and skill level."
+          content="Explore Effinity, a gamified educational platform offering personalized content on finance. Utilizing AI and big data, we provide tailored courses, articles, videos, and quizzes to match your interests and skill level."
         />
         <meta property="twitter:image" content="/EffinityMetadataBanner.png" />
       </head>
