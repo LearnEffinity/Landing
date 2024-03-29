@@ -36,7 +36,7 @@ export default function SignUpButton() {
       ) : (
         <div className="relative h-[56px] w-[360px] md:h-[64px] md:w-[576px]">
           <input
-            className="text-gray-90 block h-full w-full rounded-xl bg-surface-secondary ps-3 text-sm placeholder-text-tertiary focus:border-2 focus:border-brand-accent focus:outline-none"
+            className="text-gray-90 block h-full w-full rounded-xl bg-surface-secondary ps-5 text-sm placeholder-text-tertiary focus:border-2 focus:border-brand-accent focus:outline-none"
             placeholder="Email Address..."
             name="email"
           />
