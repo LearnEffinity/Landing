@@ -27,23 +27,6 @@ export const metadata: Metadata = {
       },
     ],
   },
-
-  keywords: [
-    "Effinity",
-    "Finance",
-    "Technology",
-    "Education",
-    "Gamified",
-    "FinTech",
-    "Gamified Education",
-    "Financial Literacy",
-    "Personal Finance",
-    "Personalized Learning",
-    "Learning Platform",
-    "Interactive Quizzes",
-    "Online Courses",
-    "Technology Education",
-  ],
 };
 
 export default function RootLayout({
@@ -55,6 +38,24 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="shortcut icon" href="favicon.ico" type="image/icon" />
+        {/* Open Graph (All Social Medias almost) */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://effinity.vercel.app/" />
+        <meta property="og:title" content="Effinity" />
+        <meta
+          property="og:description"
+          content="Explore Effinity, a gamified educational platform offering personalized content on technology and finance. Utilizing AI and big data, we provide tailored courses, articles, videos, and quizzes to match your interests and skill level."
+        />
+        <meta property="og:image" content="/EffinityMetadataBanner.png" />
+        {/* Twitter */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://effinity.vercel.app/" />
+        <meta property="twitter:title" content="Effinity" />
+        <meta
+          property="twitter:description"
+          content="Explore Effinity, a gamified educational platform offering personalized content on technology and finance. Utilizing AI and big data, we provide tailored courses, articles, videos, and quizzes to match your interests and skill level."
+        />
+        <meta property="twitter:image" content="/EffinityMetadataBanner.png" />
       </head>
       <body
         className={`${poppins.className} max-w-screen min-h-screen overflow-x-hidden bg-surface-primary`}
