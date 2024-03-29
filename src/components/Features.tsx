@@ -178,7 +178,7 @@ function Connector({ direction }: { direction: "left" | "right" }) {
 
 export default function FeaturesSection() {
   return (
-    <section className="flex flex-col items-center">
+    <section className="-mt-[46px] flex flex-col items-center sm:mt-0">
       <FeatureCard
         index={1}
         heading={
@@ -189,18 +189,18 @@ export default function FeaturesSection() {
           </>
         }
         paragraph="Who said learning about money has to be dull? With our gamified approach, you'll be mastering finance while having a blast!"
-        className="bg-brand-primary lg:items-center lg:justify-end"
+        className="bg-brand-primary lg:items-center lg:justify-end "
         textClassName="lg:bottom-0 lg:left-0 desktop:-translate-x-1/2 desktop:-translate-y-8 text-brand-primary-dark"
       >
         <img
           src="/features/Feature-Image-1.png"
           alt=""
-          className="top-0 h-full max-h-96 lg:absolute lg:max-h-none lg:-translate-x-3/4 desktop:h-auto desktop:-translate-x-full"
+          className=" top-0 h-full max-h-96 -translate-x-10 -translate-y-32 transform sm:translate-y-0 md:bottom-0 lg:absolute lg:max-h-none lg:-translate-x-3/4 desktop:h-auto desktop:-translate-x-full"
         />
         <img
           src="/features/Coin.png"
           alt=""
-          className="absolute -bottom-10 -right-2 lg:-right-10 h-20 w-20 lg:h-auto lg:w-auto lg:scale-75 desktop:scale-100"
+          className="absolute -bottom-10 -right-2 h-20 w-20 lg:-right-10 lg:h-auto lg:w-auto lg:scale-75 desktop:scale-100"
         />
       </FeatureCard>
       <Connector direction="left" />
@@ -214,12 +214,12 @@ export default function FeaturesSection() {
         <img
           src="/features/Feature-Image-2.png"
           alt=""
-          className="top-0 h-full max-h-96 lg:absolute lg:max-h-none lg:translate-x-[110%] desktop:h-auto"
+          className=" top-0 h-full max-h-96 -translate-x-12 lg:absolute lg:max-h-none lg:translate-x-[110%] desktop:h-auto"
         />
         <img
           src="/features/Pig.png"
           alt=""
-          className="absolute -bottom-10 -right-2 lg:-right-10 h-20 w-20 lg:left-8 lg:h-auto lg:w-auto lg:scale-75 desktop:scale-100"
+          className="absolute -bottom-10 -right-2 h-20 w-20 md:-bottom-10 lg:-right-10 lg:bottom-10 lg:left-8 lg:h-auto lg:w-auto lg:scale-75 desktop:scale-100"
         />
       </FeatureCard>
       <Connector direction="right" />
@@ -233,12 +233,12 @@ export default function FeaturesSection() {
         <img
           src="/features/Feature-Image-3.png"
           alt=""
-          className="top-0 h-full max-h-96 lg:absolute lg:max-h-none lg:-translate-x-[200%] desktop:h-auto"
+          className="top-10 h-full max-h-96 -translate-x-10 md:right-10 md:-translate-x-1 lg:absolute lg:max-h-none lg:-translate-x-[200%] desktop:h-auto"
         />
         <img
           src="/features/Money.png"
           alt=""
-          className="absolute -bottom-10 -right-2 sm:-right-10 h-24 w-24 lg:right-8 lg:top-0 lg:h-auto lg:w-auto lg:scale-75 desktop:scale-100"
+          className="absolute -bottom-10 -right-2 h-24 w-24 sm:-right-10 lg:right-8 lg:top-0 lg:h-auto lg:w-auto lg:scale-75 desktop:scale-100"
         />
       </FeatureCard>
     </section>
