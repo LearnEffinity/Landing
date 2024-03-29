@@ -45,7 +45,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="favicon.ico" type="image/x-icon" />
         {/* Open Graph (All Social Medias almost) */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://effinity.vercel.app/" />
