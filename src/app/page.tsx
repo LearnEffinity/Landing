@@ -7,7 +7,6 @@ export default function Home() {
   return (
     <>
       <HeroSection />
-      <div className="h-12" />
       <FeaturesSection />
       <div className="h-12" />
       <MeetTheTeam />
