@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 
   openGraph: {
     type: "website",
-    url: "https://effinity.vercel.app/",
+    url: "https://www.effinity.ca",
     siteName: "Effinity",
     title: "Effinity",
     description:
@@ -48,7 +48,7 @@ export default function RootLayout({
         <link rel="icon" href="favicon.ico" type="image/x-icon" />
         {/* Open Graph (All Social Medias almost) */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://effinity.vercel.app/" />
+        <meta property="og:url" content="https://www.effinity.ca" />
         <meta property="og:title" content="Effinity" />
         <meta
           property="og:description"
@@ -57,7 +57,7 @@ export default function RootLayout({
         <meta property="og:image" content="/EffinityMetadataBanner.png" />
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://effinity.vercel.app/" />
+        <meta property="twitter:url" content="https://www.effinity.ca" />
         <meta property="twitter:title" content="Effinity" />
         <meta
           property="twitter:description"
