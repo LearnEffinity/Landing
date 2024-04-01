@@ -44,27 +44,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <link rel="icon" href="favicon.ico" type="image/x-icon" />
-        {/* Open Graph (All Social Medias almost) */}
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.effinity.ca" />
-        <meta property="og:title" content="Effinity" />
-        <meta
-          property="og:description"
-          content="Explore Effinity, a gamified educational platform offering personalized content on finance. Utilizing AI and big data, we provide tailored courses, articles, videos, and quizzes to match your interests and skill level."
-        />
-        <meta property="og:image" content="/EffinityMetadataBanner.png" />
-        {/* Twitter */}
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://www.effinity.ca" />
-        <meta property="twitter:title" content="Effinity" />
-        <meta
-          property="twitter:description"
-          content="Explore Effinity, a gamified educational platform offering personalized content on finance. Utilizing AI and big data, we provide tailored courses, articles, videos, and quizzes to match your interests and skill level."
-        />
-        <meta property="twitter:image" content="/EffinityMetadataBanner.png" />
-      </head>
       <body
         className={`${poppins.className} max-w-screen min-h-screen overflow-x-hidden bg-surface-primary`}
       >
