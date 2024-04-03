@@ -23,7 +23,7 @@ export const metadata: Metadata = {
       "Explore Effinity, a gamified educational platform offering personalized content on finance. Utilizing AI and big data, we provide tailored courses, articles, videos, and quizzes to match your interests and skill level.",
     images: [
       {
-        url: "/EffinityMetadataBanner.png",
+        url: "/public/EffinityMetadataBanner.png",
       },
     ],
   },
