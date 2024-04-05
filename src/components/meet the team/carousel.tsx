@@ -116,16 +116,6 @@ const TeamDetails = [
   },
   {
     id: 12,
-    name: "Giselle Nguyen",
-    role: "UX / UI Designer",
-    description:
-      "From piano keys to Keynote: crafting beautiful experiences for the audience.",
-    image: "/memojis/giselle.png",
-    linkedin: "https://www.linkedin.com/in/giselle-nguyen/",
-    category: "Designers",
-  },
-  {
-    id: 13,
     name: "Travis Flemming",
     role: "Senior UX / UI Designer",
     description:
