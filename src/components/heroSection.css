@@ -42,10 +42,11 @@
   -webkit-text-fill-color: initial;
 }
 
-.subtitle{
+.subtitle {
   margin-top: 0;
   margin-bottom: 4px;
 }
+
 .backdrop {
   position: absolute;
   z-index: 0;
@@ -61,6 +62,7 @@
     max-width: 100%; /* Image can be as wide as its container */
   }
 }
+
 .board {
   transform: rotate(-18deg);
 
@@ -89,7 +91,6 @@
   max-width: 180px;
 }
 
-
 @media (min-width: 1160px) {
   .star {
     top: 34%;
@@ -97,7 +98,6 @@
     max-width: 94px;
   }
 }
-
 
 @media (max-width: 1159px) {
   .star {
@@ -113,7 +113,7 @@
   right: 0%;
   max-width: 180px;
 }
-@media (max-width: 768px) , (max-height: 800px) {
+@media (max-width: 768px), (max-height: 800px) {
   .backdrop {
     transform: scale(0.8);
   }
@@ -126,10 +126,7 @@
   .trophy {
     transform: rotate(20deg) scale(0.8);
   }
-
 }
-
-
 
 @media (max-width: 600px) {
   .backdrop {
@@ -140,7 +137,6 @@
     width: 100%;
   }
   .subtitle {
-    max-width: 75%;
     white-space: normal;
   }
 }

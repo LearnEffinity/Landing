@@ -100,29 +100,66 @@ const HeroSection: React.FC = () => {
         toggleActions: "play pause play pause",
       },
     });
-
   });
 
-
   return (
-    <div className="hero-section" id="#heroSection" style={{ height: "calc(100vh + 2px)" }}>
+    <div
+      className="hero-section -mt-36 md:mt-0"
+      id="#heroSection"
+      style={{ height: "calc(100vh + 2px)" }}
+    >
       <div className="content-container">
-        <h1 className="title-h1 text-4xl leading-normal lg:text-5xl font-semibold text-center mx-auto px-4 lg:px-0 max-w-screen-lg title-with-gradient">
-          <span className="title-span-non">Unlock Your Financial Potential,</span>
+        <h1 className="title-h1 title-with-gradient  px-4 text-center text-4xl font-semibold leading-normal lg:px-0 lg:text-5xl">
+          <span className="title-span-non">
+            Unlock Your Financial Potential,
+          </span>
           &nbsp;
-          <span className="title-s2 title-span">Gamify Your Learning Journey</span>
+          <span className="title-s2 title-span">
+            Gamify Your Learning Journey
+          </span>
         </h1>
-        <p className="subtitle text-base lg:text-lg text-center mx-auto px-4 lg:px-0 mt-4 lg:mt-6 max-w-md lg:max-w-lg xl:max-w-xl 2xl:max-w-3xl whitespace-normal">
-          Say goodbye to boring finance lessons and get ahead financially while having a blast with Effinity!
+        <p className="subtitle mx-auto mt-4 max-w-md whitespace-normal px-4 text-center text-base lg:mt-6 lg:max-w-lg lg:px-0 lg:text-lg xl:max-w-xl 2xl:max-w-3xl">
+          Say goodbye to boring finance lessons and get ahead financially while
+          having a blast with Effinity!
         </p>
         <SignUpButton />
       </div>
-      <img id="board" src="/heroIcons/Board.png" alt="Board icon" className="backdrop board" />
-      <img id="trophy" src="/heroIcons/trophy.png" alt="Trophy icon" className="backdrop trophy" />
-      <img id="study" src="/heroIcons/Online-Study.png" alt="Study icon" className="backdrop study" />
-      <img id="star" src="/heroIcons/Star-1.png" alt="Star icon" className="backdrop star" />
-      <img id="calculator" src="/heroIcons/Calculator-1.png" alt="Calculator icon" className="backdrop calculator" />
-      <img id="card" src="/heroIcons/Card-1.png" alt="Card icon" className="backdrop credit" />
+      <img
+        id="board"
+        src="/heroIcons/Board.png"
+        alt="Board icon"
+        className="backdrop board"
+      />
+      <img
+        id="trophy"
+        src="/heroIcons/trophy.png"
+        alt="Trophy icon"
+        className="backdrop trophy"
+      />
+      <img
+        id="study"
+        src="/heroIcons/Online-Study.png"
+        alt="Study icon"
+        className="backdrop study"
+      />
+      <img
+        id="star"
+        src="/heroIcons/Star-1.png"
+        alt="Star icon"
+        className="backdrop star"
+      />
+      <img
+        id="calculator"
+        src="/heroIcons/Calculator-1.png"
+        alt="Calculator icon"
+        className="backdrop calculator"
+      />
+      <img
+        id="card"
+        src="/heroIcons/Card-1.png"
+        alt="Card icon"
+        className="backdrop credit"
+      />
     </div>
   );
 };

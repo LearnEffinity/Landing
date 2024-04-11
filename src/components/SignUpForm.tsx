@@ -42,7 +42,7 @@ export default function SignUpButton() {
           />
           <button
             type="submit"
-            className="absolute bottom-[9.5px] end-4 h-[40px] w-[122px] rounded-lg bg-brand-accent px-5 py-2 text-sm font-medium text-white hover:bg-brand-primary md:bottom-[12px]"
+            className="absolute bottom-[7.5px] end-2 h-[40px] w-[122px] rounded-lg bg-brand-accent px-5 py-2 text-sm font-medium text-white hover:bg-brand-primary sm:bottom-[9.5px] sm:end-4 md:bottom-[12px]"
             disabled={loading}
           >
             {loading ? (
