@@ -2,8 +2,8 @@
 <hr >
 
 ## Code
-- [] Code is formatted & clean
-- [] Changes have comments (if needed)
+ [] Code is formatted & clean
+ [] Changes have comments (if needed)
 
 ## Functionality && Visuals && Build
 - [] All interactive elements work
