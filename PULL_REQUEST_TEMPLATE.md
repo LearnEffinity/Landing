@@ -1,5 +1,5 @@
 # PR request checklist
-<hr >
+
 
 ## Code
  - [ ] Code is formatted & clean
